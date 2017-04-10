@@ -170,6 +170,7 @@ p, .article-body {
   line-height: 2.2rem;
   color: black;
   margin-top: 1rem;
+  max-width: 90vw;
 }
 
 .byline {
