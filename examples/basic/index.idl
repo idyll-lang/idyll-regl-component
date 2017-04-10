@@ -17,17 +17,20 @@ For example, with a minor modification to regl's [link href:"http://regl.party/e
 I can embed it in an Idyll document. With just a couple of lines, I can add a dynamic variable to change the size of the particles,
 
 [var name:"particleSize" value:0.5 /]
-Particle size: [dynamic value:particleSize interval:0.1 min:0.1 max:8 /]
 
 [Particles size:particleSize /]
+
+Particle size: [dynamic value:particleSize interval:0.1 min:0.1 max:8 /]
 
 [gist gist:"0f83a12e29b268ffca39f471ecf39e91" file:"particles.idl" /]
 
 [var name:"t" value:2.08 /]
-and let a reader change the angle of rotation, θ = [dynamic value:t interval:0.01 format:"0.2f"  /],
+and let a reader change the angle of rotation
 of this [link href:"http://regl.party/examples" text:"geomorphing bunny" /].
 
 [Geomorph t:t /]
+
+θ = [dynamic value:t interval:0.01 format:"0.2f"  /]
 
 To help with this, I've abstracted out a component that uses [link href:"https://github.com/regl-project/multi-regl" text:"multi-regl" /]
 to multiplex a single regl instance over the entire page. To create a custom regl component, create a class that
@@ -40,7 +43,7 @@ The `idyll-regl-component` handles taking control of the DOM from react, and ins
 This can be combined with many of Idyll's built-in components to quickly add interactivity. See this component
 on github: [link href:"https://github.com/idyll-lang/idyll-regl-component" text:"https://github.com/idyll-lang/idyll-regl-component" /].
 
-For example, you could implement a play, pause button.
+For example, you could implement a play/pause button.
 
 [var name:"play" value:1 /]
 [var name:"frameOffset" value:0 /]
@@ -48,7 +51,7 @@ For example, you could implement a play, pause button.
 [Particles play:play frameOffset:frameOffset /]
 
 [Button onClick:`play = 1 - play`]
-[DisplayVar var:`play === 0 ? 'Play' : 'Pause'` /]
+[DisplayVar var:`play === 0 ? '▶' : '❙❙'` /]
 [/Button]
 [small](Click me!)[/small]
 
