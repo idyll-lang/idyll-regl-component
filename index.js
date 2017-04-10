@@ -31,7 +31,7 @@ class ReglComponent extends IdyllComponent {
 
   render() {
     let { className, style } = this.props;
-    className += ' regl';
+    className = (className ? className : '') + ' regl';
     return React.createElement('div', { className, style });
   }
 }

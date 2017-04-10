@@ -1,5 +1,5 @@
 
-const ReglComponent = require('idyll-regl-component');
+const ReglComponent = require('../../..');
 
 class Particles extends ReglComponent {
 
