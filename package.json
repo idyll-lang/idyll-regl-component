@@ -1,6 +1,6 @@
 {
   "name": "idyll-regl-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Component base class to make it easy to integrate regl into Idyll projects",
   "main": "index.js",
   "scripts": {
