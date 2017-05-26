@@ -16,11 +16,11 @@ inline with your text in Idyll.
 For example, with a minor modification to regl's [link href:"http://regl.party/examples" text:"particles example" /]
 I can embed it in an Idyll document. With just a couple of lines, I can add a dynamic variable to change the size of the particles,
 
-[var name:"particleSize" value:0.5 /]
+[var name:"particleSize" value:1.0 /]
 
 [Particles size:particleSize /]
 
-Particle size: [dynamic value:particleSize interval:0.1 min:0.1 max:8 /]
+Particle size: [dynamic value:particleSize interval:0.05 min:0.4 max:8 /]
 
 [gist gist:"0f83a12e29b268ffca39f471ecf39e91" file:"particles.idl" /]
 

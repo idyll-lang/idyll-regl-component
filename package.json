@@ -2,7 +2,7 @@
   "name": "idyll-regl-component",
   "version": "1.0.2",
   "description": "Component base class to make it easy to integrate regl into Idyll projects",
-  "main": "lib.js",
+  "main": "index.js",
   "scripts": {
     "build": "babel index.js -o lib.js",
     "test": "echo \"Error: no test specified\" && exit 1"
