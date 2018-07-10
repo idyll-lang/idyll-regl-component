@@ -1,9 +1,11 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const multiREGL = require('multi-regl')();
-const IdyllComponent = require('idyll-component');
+let multiREGL;
+try {
+  multiREGL = require('multi-regl')();
+} catch(e) {}
 
-class ReglComponent extends IdyllComponent {
+class ReglComponent extends React.Component {
 
   componentDidMount() {
     if (super.componentDidMount) {

@@ -12,11 +12,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var multiREGL = require('multi-regl')();
-var IdyllComponent = require('idyll-component');
+var multiREGL = void 0;
+try {
+  multiREGL = require('multi-regl')();
+} catch (e) {}
 
-var ReglComponent = function (_IdyllComponent) {
-  _inherits(ReglComponent, _IdyllComponent);
+var ReglComponent = function (_React$Component) {
+  _inherits(ReglComponent, _React$Component);
 
   function ReglComponent() {
     _classCallCheck(this, ReglComponent);
@@ -67,7 +69,7 @@ var ReglComponent = function (_IdyllComponent) {
   }]);
 
   return ReglComponent;
-}(IdyllComponent);
+}(React.Component);
 
 ReglComponent.defaultProps = {
   className: ''
